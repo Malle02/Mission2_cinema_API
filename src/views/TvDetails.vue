@@ -44,9 +44,9 @@ export default {
         });
     },
 
-fetchMovieralisateur(movieId) {
+fetchMovieralisateur(tvId) {
       axios
-        .get(`https://api.themoviedb.org/3/tv/${movieId}/credits?language=fr-FR`, {
+        .get(`https://api.themoviedb.org/3/tv/${tvId}/credits?language=fr-FR`, {
           params: {
             api_key: "10f0f63ae269e673864d7ed70c5147b8",
             language: "fr-FR",

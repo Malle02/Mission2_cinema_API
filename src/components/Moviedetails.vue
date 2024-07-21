@@ -32,7 +32,29 @@
     </span>
    </p>
     
+
+
+
+<!-- Entrainement E5  -->
+
+<h1>La liste des acteur de film : </h1>
+<ul>
+
+<router-link  v-for="realisateur in realisateur" :key="realisateur.id" :to="{ name: 'ActeurDetails', params: { id: realisateur.id } }" class="bg-white rounded-lg overflow-hidden shadow-lg  bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+ <p>Nom {{realisateur.name}}</p>
+ <img :src="getImageUrl(realisateur.profile_path)" alt="Movie Poster" class="mb-4 rounded-lg">
+  ================================================
+  ================================================
+    
+
+
+   </router-link>
+</ul>
   </div>
+
+ 
+
+
 </template>
 
 <script>

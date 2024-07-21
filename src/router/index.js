@@ -5,6 +5,7 @@ import Detailstv from '../views/TvDetails.vue'
 import Search from '../views/Search.vue'
 import Moviecard from '../components/MovieCard.vue'
 import Searchbar from '../components/SearchBar.vue'
+import detailActeur from '../views/detailActeur.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/searchbar',
       name: 'searchbar',
       component: Searchbar
+    },
+    {
+      path: '/detailsacteur:id',
+      name: 'ActeurDetails',
+      component: detailActeur
     }
   ]
 })

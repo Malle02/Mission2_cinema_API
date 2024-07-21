@@ -24,7 +24,7 @@ export default {
   mounted() {
     
     this.fetchMovieDetails(this.$route.params.id);
-    this.fetchTvDetails(this.$route.params.id);
+    // this.fetchTvDetails(this.$route.params.id);
     this.fetchMovieralisateur(this.$route.params.id);
   },
   methods: {
@@ -43,21 +43,21 @@ export default {
           console.error("Erreur lors de la récupération des détails du film:", error);
         });
     },
-    fetchTvDetails(tvId) {
-      axios
-        .get(`https://api.themoviedb.org/3/tv/${tvId}`, {
-          params: {
-            api_key: "10f0f63ae269e673864d7ed70c5147b8",
-             language: "fr-FR",
-          },
-        })
-        .then((response) => {
-          this.selectedMovie = response.data;
-        })
-        .catch((error) => {
-          console.error("Erreur lors de la récupération des détails du film:", error);
-        });
-    },
+    // fetchTvDetails(tvId) {
+    //   axios
+    //     .get(`https://api.themoviedb.org/3/tv/${tvId}`, {
+    //       params: {
+    //         api_key: "10f0f63ae269e673864d7ed70c5147b8",
+    //          language: "fr-FR",
+    //       },
+    //     })
+    //     .then((response) => {
+    //       this.selectedMovie = response.data;
+    //     })
+    //     .catch((error) => {
+    //       console.error("Erreur lors de la récupération des détails du film:", error);
+    //     });
+    // },
 
 fetchMovieralisateur(movieId) {
       axios
